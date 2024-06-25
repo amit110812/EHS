@@ -1,0 +1,106 @@
+.sidebar{
+    /* background-color: rgb(250, 248, 246); */
+    /* background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,128,149,0.7345063025210083) 69%); */
+    background-color: #008095;
+    color: #fff;
+    /* width: auto; */
+    /* transition: 1s ease-in-out; */
+    overflow: hidden;
+
+}
+.span-none{
+    display: none;
+}
+.span-display{
+    display: block;
+
+}
+
+.main-incident-section{
+    width: 85vw;
+    
+}
+.tabs-tags{
+    width:100%
+
+}
+.tabs-tags__tag{
+    padding: 10px 100px;
+    text-align: center;
+    width: 100%;
+    border:none;
+    background-color: #008095;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+}
+.tabs-tags__tag:hover {
+    background-color: #0e637a;
+}
+.active-tab{
+    background-color: #014a5e;
+    padding: 10px 100px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-radius: 0;
+}
+.tabs-form{
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    border:none;
+    background-color: #008095;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+}
+.tabs-form:hover {
+    background-color: #0e637a;
+}
+.active-tab-form{
+    background-color: #599fb2;
+    /* background-color: #34879e; */
+    padding: 10px ;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-radius: 0;
+}
+.tab-icon{
+    transform: rotate(180deg);
+    transition: .5s ease-in-out;
+}
+.form-header{
+    letter-spacing: 2px;
+}
+input[placeholder], [placeholder], *[placeholder] {
+    color: rgb(146, 144, 144) !important;
+}
+.form-select{
+    color: rgb(146, 144, 144) !important;
+}
+.form-select:focus{
+    border-color: #c5c0c0;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;  
+}
+::-webkit-calendar-picker-indicator {
+    filter: invert(0.5);
+}
+.form-label{
+    font-weight: 500;
+    /* letter-spacing: 1px; */
+}
+.form-check-input{
+    border-color: #c5c0c0;
+     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;  
+}
+.form-control:focus {
+    border-color: #c5c0c0;
+     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;  
+    } 

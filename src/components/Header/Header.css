@@ -1,0 +1,18 @@
+.header-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 4vw;
+    /* background-color: rgb(250, 248, 246); */
+    background: #008095;
+    /* background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,128,149,0.7345063025210083) 69%); */
+    color: #fff;
+}
+.profile-role{
+    font-size: 10px;
+}
+.user-profile-detail{
+    display: flex;
+    align-items: center;
+}
+
