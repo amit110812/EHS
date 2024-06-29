@@ -1,9 +1,12 @@
 import React from 'react'
 import './Dashboard.css'
 import Sidebar from '../Sidebar/Sidebar'
+import ChartBar from '../Chart/ChartBar'
+import Pie from '../Chart/PieChart'
 
 const Dashboard = () => {
   return (
+    <div>
     <div className='d-flex dashboard-screen-main'>
         <div className='sidebar-section'>
 <Sidebar/>
@@ -26,7 +29,16 @@ const Dashboard = () => {
 <div className='insights-table'>
     Table for insights
 </div>
+<div className='chartmain'>
+      <div className='chart-1'><ChartBar/></div>
+      <div className='chart-2 ms-5'><Pie/></div>
+      </div>
         </div>
+
+        
+    </div>
+    
+
     </div>
   )
 }

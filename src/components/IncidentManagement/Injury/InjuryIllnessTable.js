@@ -1,5 +1,6 @@
 import React from "react";
 import { Table } from "react-bootstrap";
+import Sidebar from "../../Sidebar/Sidebar";
 
 
 const InjuryIllnessTable = () => {
@@ -622,7 +623,11 @@ const InjuryIllnessTable = () => {
       },
     },
   ];
-  return <div className="d-flex justify-content-center mt-5">
+  return <div className="d-flex" style={{height:"90vh"}}>
+    <div className="sidebar">
+<Sidebar/>
+      </div>
+    <div className="d-flex justify-content-center mt-5" style={{width:"85vw"}}>
   <div className="table-container">
     <Table  striped bordered hover size="lg"  id="data-table"
       style={{border: "1px solid rgba(186, 186, 186, 1)"}}>
@@ -817,7 +822,8 @@ const InjuryIllnessTable = () => {
       </tbody>
     </Table>
   </div>
-  </div>;
+  </div>
+    </div>;
 };
 
 export default InjuryIllnessTable;

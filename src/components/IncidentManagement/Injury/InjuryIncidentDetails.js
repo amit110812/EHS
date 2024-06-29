@@ -3,6 +3,7 @@ import { Form, DropdownButton, Dropdown } from "react-bootstrap";
 import Multiselect from "multiselect-react-dropdown";
 import "./InjuryIncident.css";
 import Arrow from "../../../assets/Images/upArrow.png";
+import Sidebar from "../../Sidebar/Sidebar";
 
 const InjuryIncidentDetails = () => {
   const data = [
@@ -64,9 +65,13 @@ const InjuryIncidentDetails = () => {
   const [activeFormTabE, setActiveFormTabE] = useState(false);
   const [activeFormTabF, setActiveFormTabF] = useState(false);
   return (
+    <div className="d-flex">
+<div className="sidebar">
+  <Sidebar/>
+</div>
     <div
       className="m-5 p-5"
-      style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
+      style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px", width:"85vw" }}
     >
       <Form
         className="mx-5 px-5 text-start"
@@ -674,6 +679,7 @@ const InjuryIncidentDetails = () => {
 
         <button className="my-5 tabs-form form-header">SUBMIT</button>
       </Form>
+    </div>
     </div>
   );
 };

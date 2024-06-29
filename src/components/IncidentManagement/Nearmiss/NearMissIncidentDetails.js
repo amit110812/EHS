@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Form, DropdownButton, Dropdown } from "react-bootstrap";
 import Arrow from "../../../assets/Images/upArrow.png";
+import Sidebar from "../../Sidebar/Sidebar";
 
 const NearMissIncidentDetails = () => {
   const data = [
@@ -43,9 +44,13 @@ const NearMissIncidentDetails = () => {
   const [activeFormTabE, setActiveFormTabE] = useState(false);
   const [activeFormTabF, setActiveFormTabF] = useState(false);
   return (
+    <div className="d-flex">
+ <div className="sidebar">
+<Sidebar/>
+      </div>
     <div
       className="m-5 p-5"
-      style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
+      style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px", width:"85vw" }}
     >
       <Form
         className="mx-5 px-5 text-start"
@@ -434,6 +439,7 @@ const NearMissIncidentDetails = () => {
 
         <button className="my-5 tabs-tags__tag">Submit</button>
       </Form>
+    </div>
     </div>
   );
 };

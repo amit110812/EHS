@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form, DropdownButton, Dropdown } from "react-bootstrap";
 import Arrow from "../../assets/Images/upArrow.png";
+import Sidebar from "../Sidebar/Sidebar";
 
 const EHSObservationDetails = () => {
   const data = [
@@ -37,9 +38,13 @@ const EHSObservationDetails = () => {
   const [activeFormTabC, setActiveFormTabC] = useState(true);
   const [activeFormTabF, setActiveFormTabF] = useState(true);
   return (
+    <div className="d-flex">
+<div className="sidebar">
+<Sidebar/>
+      </div>
     <div
       className="m-5 p-5"
-      style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}
+      style={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px", width:"85vw" }}
     >
       <Form
         className="mx-5 px-5 text-start"
@@ -48,7 +53,7 @@ const EHSObservationDetails = () => {
             "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;",
         }}
       >
-        <h5 className="mb-1 form-header">EHS Observation Input Field</h5>
+        <h5 className="mb-1 form-header">EHS OBSERVATION INPUT FILED</h5>
         <hr className="pb-4" />
 
         {
@@ -341,6 +346,7 @@ const EHSObservationDetails = () => {
 
         <button className="my-5 tabs-tags__tag">Submit</button>
       </Form>
+    </div>
     </div>
   );
 };

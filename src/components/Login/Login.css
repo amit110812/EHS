@@ -1,0 +1,32 @@
+.login-page{height: 84vh;
+}
+.main-box{
+    margin: auto;
+    margin-top: 5vh;
+    display: flex;
+    width: 60vw;
+    padding: 20px;
+}
+.login-right-box{
+    border: 1px solid rgb(237, 234, 234);
+    box-shadow: 9px 16px 22px 0px rgba(0,0,0,0.1);
+    padding: 50px;
+    width: 30vw;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+.login-form input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.login-right-box img{
+    height: 60vh;
+    object-fit: contain;
+}
+.login-page span:hover{
+    font-weight: bolder;
+}

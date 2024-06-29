@@ -4,6 +4,9 @@ import { useDispatch } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate, Link } from "react-router-dom";
+import './index.css'
+import PrimaryButton from "../../utils/PrimaryButton";
+import SecondaryButton from "../../utils/SecondaryButton";
 
 const UserSignupDetails = () => {
   const navigate = useNavigate();
@@ -121,10 +124,10 @@ const UserSignupDetails = () => {
 
   return (
     <div className="user-creation ">
-      <div className="user-creation-form mx-5 px-3">
+      <div className="user-creation-form px-3">
         <ToastContainer />
-        <div className="login-input-form">
-          <h4 className="text-start login-header">New Employee Registration</h4>
+        <div className="login-input-form mt-3 mb-4">
+          <h4 className="text-start login-header" style={{color:"#D66853"}}>New Employee Registration</h4>
           <Form onSubmit={handleLogin}>
             <Form.Group className="mb-3 my-4" controlId="formGroupEmail">
               <Form.Control
@@ -150,7 +153,7 @@ const UserSignupDetails = () => {
                 {errors.password}
               </Form.Control.Feedback>
             </Form.Group>
-            <Form.Group className="mb-3 mt-4" controlId="formGroupPassword">
+            <Form.Group className="mb-3 mt-4 " controlId="formGroupPassword">
               <Form.Control
                 type="password"
                 value={password}
@@ -162,13 +165,11 @@ const UserSignupDetails = () => {
                 {errors.password}
               </Form.Control.Feedback>
             </Form.Group>
-            <Button type="submit" className="login-btns py-2 mb-3 mt-4">
-              Next
-            </Button>
+            <SecondaryButton title={"Next"}/>
           </Form>
           <Form onSubmit={handleLogin}>
             <p className="text-start">
-              <b>Select Business : </b>
+              <b style={{color:"#D66853"}}>Select Business : </b>
               {business !== "" && business}
             </p>
             {business == "" && (
@@ -188,7 +189,7 @@ const UserSignupDetails = () => {
             {business !== "" && (
               <>
                 <p className="text-start">
-                  <b>State : </b> {state !== "" && state}
+                  <b style={{color:"#D66853"}}>State : </b> {state !== "" && state}
                 </p>
                 {state === "" && (
                   <div className="business-items">
@@ -211,7 +212,7 @@ const UserSignupDetails = () => {
             {state !== "" && (
               <>
                 <p className="text-start">
-                  <b>City : </b> {city !== "" && city}
+                  <b style={{color:"#D66853"}}>City : </b> {city !== "" && city}
                 </p>
                 {city === "" && (
                   <div className="business-items">
@@ -231,14 +232,19 @@ const UserSignupDetails = () => {
                 )}
               </>
             )}
-            <Button type="submit" className="login-btns py-2 mb-3 mt-4">
-              Create Profile
-            </Button>
+            <div className="d-flex d-flex justify-content-around">
+
+            <PrimaryButton title={"Create Profile"}/>
+            <div onClick={()=>navigate("/")}>
+            <SecondaryButton title={"Login"} />
+
+            </div>
+            </div>
           </Form>
         </div>
+ 
       </div>
 
-      <div></div>
     </div>
   );
 };
